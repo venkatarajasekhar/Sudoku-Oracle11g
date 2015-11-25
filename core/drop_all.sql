@@ -4,6 +4,9 @@ Alter Table Casillas
 	Drop Constraint juego_FK;
 
 Alter Table Juegos
+	Drop Constraint configInicial_FK;
+
+Alter Table Casillas
 	Drop Constraint inicial_FK;
 
 Alter Table Usados

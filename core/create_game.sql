@@ -1,40 +1,51 @@
-Declare 
-	fila number(1) := 1;
-	columna number(1) := 1;
+Declare
+	nFila number(1) := 1;
+	nColumna number(1) := 1;
+	nMatriz number(1);
+	nConfig number(5) := 1; /* no debe estar quemado */
+
+	FUNCTION existeCasilla
+		(pmatriz IN number, pfila IN number, pcolumna IN number, pconfig In number)
+		RETURN Boolean
+	IS
+		rows number(3);
+	BEGIN
+		SELECT count(*) INTO rows FROM casillas WHERE
+			casillas.matriz = pmatriz and casillas.fila = pfila and
+			casillas.columna = pcolumna and casillas.configInicial = pconfig;
+		IF rows > 0 THEN
+			RETURN true;
+		ELSE
+			RETURN false;
+		END IF;
+	END;
+
 BEGIN
-	Insert into Juegos values (
-		1,
-		'A todo Darsh',
-		1);
+
+	INSERT INTO Juegos VALUES (1, 'A todo Darsh', 1);
 
 	FOR i in 1..9 LOOP
-		FOR j in 1..9 LOOP
+		nMatriz := i;
+		FOR j IN 1..9 LOOP
+			IF (existeCasilla(nMatriz, nFila, nColumna, nConfig)) THEN
 
-			IF (j = 7) THEN
-				fila := 3;
-			ELSIF (j = 4) THEN
-				fila := 2;
-			ELSE 
-				fila := fila;
-			END IF; 
-
-			dbms_output.put_line(i ||', ' || fila
-				||', ' || columna ||', ' || 0 ||', ' || 1);
-
-			Insert into Casillas values (
-				i, fila, columna, 0, 1);
-
-			IF (columna = 3) THEN
-				columna := 1;
+				UPDATE Casillas
+					SET idJuego = 1
+					WHERE casillas.matriz = nMatriz and casillas.fila = nFila and
+						casillas.columna = nColumna and casillas.configInicial = nConfig;
 			ELSE
-				columna := columna + 1;
+				INSERT INTO Casillas VALUES (nMatriz, nFila, nColumna, 0, 1, nConfig);
 			END IF;
 
+			IF nColumna = 3 THEN
+				nFila := nFila + 1;
+				nColumna := 1;
+			ELSE
+				nColumna := nColumna + 1;
+			END IF;
 		END LOOP;
-		columna := 1;
-		fila := 1;
-		dbms_output.put_line(i || ' matrix created');
+		nFila := 1;
+		nColumna := 1;
 	END LOOP;
-
 END;
 /
