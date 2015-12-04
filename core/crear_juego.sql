@@ -33,6 +33,7 @@ BEGIN
 		END LOOP;
 		nFila := 1;
 		nColumna := 1;
+		:juego_actual := nIdJuego;
 	END LOOP;
 END;
 /

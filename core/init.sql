@@ -51,27 +51,14 @@
 	/* Restricciones */
 
 
-	/* Configuracion Inicial */
+	/* Bind Variables */
+	VARIABLE juego_actual number;
 
-	Insert into Iniciales values (
-		1,
-		'Principiante');
-
-	Insert into Iniciales values (
-		2,
-		'Intermedio');
-
-	Insert into Iniciales values (
-		3,
-		'Experto');
-
-	Insert into Iniciales values (
-		4,
-		'Muy Cerda');
 
 	/* Compilar funciones y procedimientos en /utils */
 @@..\utils\cant_juegos.sql;
 @@..\utils\existe_casilla.sql;
+@@..\utils\mostrar_juego.sql;
 /* @@..\utils\drop_all.sql; */
 
 	/* Compilar funciones y procedimientos en /core */

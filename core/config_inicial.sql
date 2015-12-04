@@ -1,4 +1,19 @@
 /* Casillas_Iniciales_Iniciales(matriz, fila, columna, numero, configInicial) */
+	Insert into Iniciales values (
+		1,
+		'Principiante');
+
+	Insert into Iniciales values (
+		2,
+		'Intermedio');
+
+	Insert into Iniciales values (
+		3,
+		'Experto');
+
+	Insert into Iniciales values (
+		4,
+		'Muy Cerda');
 
 /* Principiante 1 */
 		/* Matriz 1 - Hints */
