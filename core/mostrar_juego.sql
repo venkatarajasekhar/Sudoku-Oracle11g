@@ -7,7 +7,7 @@ BEGIN
 	dbms_output.put_line('---------------------------------------------');
 	FOR i IN 1..3 LOOP
 		FOR j in 1..3 LOOP
-			FOR casilla in (select * from casillas where fila = j and idJuego = 1 and
+			FOR casilla in (select * from casillas where fila = j and idJuego = 2 and
 								matriz between x and y order by matriz, fila, columna) LOOP
 				IF (counter = 9) THEN
 					linea := linea || ' | ' || casilla.numero || ' | ';
