@@ -20,10 +20,19 @@ BEGIN
 	dbms_output.put_line('_________________________________________________________________________________________');
 	dbms_output.put_line('-Ver Juegos Disponibles');
 	dbms_output.put_line('--Desc: Muestra la informacion completa de todos los juegos');
-	dbms_output.put_line('--Comando: @mostrar_juego');
+	dbms_output.put_line('--Comando: @mostrar_juegos_disponibles');
+	dbms_output.put_line('--Parametros: ');
+	dbms_output.put_line('_________________________________________________________________________________________');
+	dbms_output.put_line('-Seleccionar Juego');
+	dbms_output.put_line('--Desc: Selecciona un juego de la lista');
+	dbms_output.put_line('--Comando: @seleccionar_juego');
 	dbms_output.put_line('--Parametros: ');
 	dbms_output.put_line('----id_Juego: ID del juego');
 	dbms_output.put_line('_________________________________________________________________________________________');
-
+	dbms_output.put_line('-Guardar Juego');
+	dbms_output.put_line('--Desc: Guarda los cambios hechos en los juegos durante la sesion');
+	dbms_output.put_line('--Comando: @guardar_juego');
+	dbms_output.put_line('--Parametros: ');
+	dbms_output.put_line('_________________________________________________________________________________________');
 END;
 /
