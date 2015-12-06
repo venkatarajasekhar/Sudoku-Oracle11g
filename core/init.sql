@@ -59,11 +59,16 @@
 @@..\utils\cant_juegos.sql;
 @@..\utils\existe_casilla.sql;
 @@..\utils\mostrar_juego.sql;
+@@..\utils\existe_casilla_juego.sql;
+@@..\utils\numero_valido.sql;
 /* @@..\utils\drop_all.sql; */
 
 	/* Compilar funciones y procedimientos en /core */
 @config_inicial;
 @crear_juego;
+@juego_ganado;
+
+
 
 
 
