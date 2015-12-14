@@ -15,7 +15,7 @@ BEGIN
 	END IF;
 
 	IF juegoganado(:juego_actual) THEN 
-		dbms_output.put_line('Ganaste el juego mierda!');
+		dbms_output.put_line('Ganaste el juego!');
 	END IF;
 	mostrarJuego(:juego_actual);
 END;
