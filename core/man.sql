@@ -23,7 +23,7 @@ BEGIN
 	dbms_output.put_line('--Comando: @mostrar_juegos_disponibles');
 	dbms_output.put_line('--Parametros: ');
 	dbms_output.put_line('_________________________________________________________________________________________');
-	dbms_output.put_line('-Seleccionar Juego');
+	dbms_output.put_line('-Seleccionar Juego/Cargar Juego');
 	dbms_output.put_line('--Desc: Selecciona un juego de la lista');
 	dbms_output.put_line('--Comando: @seleccionar_juego');
 	dbms_output.put_line('--Parametros: ');
@@ -33,6 +33,15 @@ BEGIN
 	dbms_output.put_line('--Desc: Guarda los cambios hechos en los juegos durante la sesion');
 	dbms_output.put_line('--Comando: @guardar_juego');
 	dbms_output.put_line('--Parametros: ');
+	dbms_output.put_line('_________________________________________________________________________________________');
+	dbms_output.put_line('-Ingresar Numero');
+	dbms_output.put_line('--Desc: Ingresa un numero en la casilla ubicada en las coordenadas especificadas.');
+	dbms_output.put_line('--Comando: @seleccionar_juego');
+	dbms_output.put_line('--Parametros: ');
+	dbms_output.put_line('----matriz: numero del 1 al 9 representando la matriz');
+	dbms_output.put_line('----fila: numero del 1 al 3 representando la fila en la matriz');
+	dbms_output.put_line('----columna: numero del 1 al 3 representando la fila en la matriz');
+	dbms_output.put_line('----numero: numero que se quiere ingresar en la casilla');
 	dbms_output.put_line('_________________________________________________________________________________________');
 END;
 /

@@ -4,7 +4,7 @@ CREATE OR REPLACE FUNCTION existeCasilla
 IS
 	rows number(3);
 BEGIN
-	SELECT count(*) INTO rows FROM casillas_iniciales WHERE
+	SELECT count(*) INTO rows FROM Casillas_Iniciales WHERE
 		casillas_iniciales.matriz = pmatriz and casillas_iniciales.fila = pfila and
 		casillas_iniciales.columna = pcolumna and casillas_iniciales.configInicial = pconfig;
 	IF rows > 0 THEN

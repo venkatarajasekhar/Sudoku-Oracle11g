@@ -21,3 +21,5 @@ Drop Table Casillas_Iniciales;
 Drop Table Iniciales;
 
 Drop Table Usados;
+
+@@../utils/drop_all.sql

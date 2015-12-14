@@ -8,6 +8,7 @@
 		fila number(1),
 		columna number(1),
 		numero number(1),
+		cambiable number(1), /* Estupido Oracle no tiene tipos booleanos..  0=False 1=True */
 		idJuego number(5),
 		primary key(matriz,fila,columna,idJuego));
 
@@ -61,12 +62,13 @@
 @@..\utils\mostrar_juego.sql;
 @@..\utils\existe_casilla_juego.sql;
 @@..\utils\numero_valido.sql;
+@@..\utils\crear_juego.sql;
 /* @@..\utils\drop_all.sql; */
 
-	/* Compilar funciones y procedimientos en /core */
+	/* Ejecutar bloques de PL/SQL en /core */
 @config_inicial;
-@crear_juego;
 @juego_ganado;
+@crear_juegos_iniciales;
 
 
 
