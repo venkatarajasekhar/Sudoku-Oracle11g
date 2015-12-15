@@ -3,7 +3,6 @@ Insert into Iniciales values (1001,'Principiante');
 Insert into Iniciales values (1002,'Principiante');
 Insert into Iniciales values (2001,'Intermedio');
 Insert into Iniciales values (3001,'Experto');
-Insert into Iniciales values (4001,'Muy Cerda');
 
 /* Principiante 1 */
 Insert into Casillas_Iniciales values(1,1,3,6,1001);

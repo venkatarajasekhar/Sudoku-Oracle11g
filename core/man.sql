@@ -2,10 +2,15 @@ BEGIN
 	dbms_output.put_line('*** Manual de Uso - Sudoku ***');
 	dbms_output.put_line('_________________________________________________________________________________________');
 	dbms_output.put_line('-Juego Nuevo');
-	dbms_output.put_line('--Desc: Crea un juego nuevo apartir de una configuracion aleatoria del nivel seleccionado');
+	dbms_output.put_line('--Desc: Crea un juego nuevo apartir de una configuracion del nivel seleccionado');
 	dbms_output.put_line('--Comando: @crear_juego');
 	dbms_output.put_line('--Parametros: ');
 	dbms_output.put_line('----nivel: nivel de dificultad del juego (Facil, Intermedio, Dificil y Muy Cerda)');
+	dbms_output.put_line('_________________________________________________________________________________________');
+	dbms_output.put_line('-Juego Aleatorio');
+	dbms_output.put_line('--Desc: Crea un juego nuevo apartir de una configuracion aleatoria del nivel seleccionado');
+	dbms_output.put_line('--Comando: @crear_juego_aleatorio');
+	dbms_output.put_line('--Parametros: ');
 	dbms_output.put_line('_________________________________________________________________________________________');
 	dbms_output.put_line('-Ver Juego Actual');
 	dbms_output.put_line('--Desc: Muestra el juego actual');
