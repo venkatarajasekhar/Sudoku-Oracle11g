@@ -7,7 +7,7 @@ DECLARE
 BEGIN
 
 	
-	cambiable := select casillas.cambiable from casillas where matriz = pmatriz 
+	select casillas.cambiable into cambiable from casillas where matriz = pmatriz 
 		and columna = pcolumna and fila = pfila and idJuego = :juego_actual;
 		
 	/*Revisa si la casilla que se desea cambiar es una casilla inicial*/
